@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/chrisPfaff/coinPriceCLI#readme",
   "dependencies": {
-    "eslint": "^5.8.0"
+    "colorette": "^1.0.7",
+    "eslint": "^5.8.0",
+    "minimist": "^1.2.0"
   }
 }
