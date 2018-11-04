@@ -1,5 +1,6 @@
 const minimist = require("minimist");
 const { red, blue, yellow } = require("colorette");
+
 module.exports = () => {
   const args = minimist(process.argv.slice(2));
 

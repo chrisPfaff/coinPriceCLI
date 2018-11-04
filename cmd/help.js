@@ -11,7 +11,8 @@ const menus = {
   type: `
     coinPriceCLI type <options>
 
-    --currency, -c ...... the currency to use`
+    --currency, -c ...... the currency to use
+    `
 };
 
 module.exports = args => {
