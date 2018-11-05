@@ -1,5 +1,5 @@
 const minimist = require("minimist");
-const { red, blue, yellow } = require("colorette");
+const { red, yellow } = require("colorette");
 const error = require("./utils/error");
 
 module.exports = () => {
@@ -16,7 +16,7 @@ module.exports = () => {
   }
 
   console.log(
-    yellow("\n" + "💵 💵 💵 Welcome to the coinPriceCLI 💵 💵 💵" + "\n")
+    yellow("\n" + "  💵 💵 💵 Welcome to the coinPriceCLI 💵 💵 💵" + "\n")
   );
 
   switch (cmd) {

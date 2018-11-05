@@ -1,4 +1,4 @@
-const { green, red } = require("colorette");
+const { green, red, yellow } = require("colorette");
 const getCurrency = require(".././utils/currencyFetch");
 const ora = require("ora");
 
@@ -8,10 +8,10 @@ module.exports = async args => {
     case "Bitcoin":
       id = 1;
       break;
-    case "Litcoin":
+    case "Litecoin":
       id = 2;
       break;
-    case "Bitcoin Cash":
+    case "BitcoinCash":
       id = 1831;
       break;
     case "IOTA":
@@ -52,7 +52,21 @@ module.exports = async args => {
 
     loading.stop();
 
-    console.log(currency);
+    let name = currency.name;
+    let rank = currency.rank;
+    let price = currency.quotes.USD.price;
+    let changeSinceYesterday = currency.quotes.USD.percent_change_24h;
+    let changeSinceLastWeek = currency.quotes.USD.percent_change_7d;
+
+    console.log("Currency =====> " + green(name));
+    console.log("Rank =====> " + green(rank));
+    console.log("Current Price In USD =====> " + green(price));
+    console.log(
+      "Percent Change Since Yesterday =====> " + yellow(changeSinceYesterday)
+    );
+    console.log(
+      "Percent Change Since Last Week =====> " + yellow(changeSinceLastWeek)
+    );
   } catch (err) {
     loading.stop();
 
