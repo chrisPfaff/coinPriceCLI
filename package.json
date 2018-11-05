@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "digital currency command line interface",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chrisPfaff/coinPriceCLI.git"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=9"
+  },
+  "preferGlobal": true,
+  "keywords": [
+    "cryptocurrency",
+    "coins",
+    "bitcoin"
+  ],
+  "author": "Chris Pfaff",
+  "license": "MIT",
   "bin": {
     "coinPriceCLI": "./bin/coinPriceCLI.js"
   },
